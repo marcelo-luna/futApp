@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FutApp.View.CadPlayer" Title="Cadastro Jogador">
+  <ContentPage.Content>
+    <StackLayout Padding="25">
+      <Label Text="Nome"></Label>
+
+      <Entry x:Name="namePlayer" Text="{Binding Name}"></Entry>
+
+      <Picker x:Name="positionPlayer" SelectedIndex="{Binding Position, Mode=TwoWay}" HorizontalOptions="FillAndExpand" Title="Posição"/>
+
+      <StackLayout Orientation="Horizontal">
+        <Label Text="Nível: "></Label>
+        <Label x:Name="playerLevel" Text="{Binding Level, Mode=TwoWay}"></Label>
+      </StackLayout>
+
+      <Slider x:Name ="playerSliderLevel" Maximum="5" Value="{Binding Level, Mode=TwoWay}"></Slider>
+
+      <StackLayout Orientation="Horizontal">
+        <Label Text="Vai pro jogo:"></Label>
+        <Switch x:Name="playerStatus" IsToggled="{Binding Status}"></Switch>
+      </StackLayout>
+      <Button x:Name="Save" Text="Salvar" Command="{Binding SavePlayer}"></Button>
+
+
+    </StackLayout>
+
+  </ContentPage.Content>
+</ContentPage>
