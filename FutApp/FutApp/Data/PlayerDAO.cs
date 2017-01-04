@@ -47,5 +47,17 @@ namespace FutApp.Data
                 
             }
         }
+
+        public void update(Player player)
+        {
+            try
+            {
+                conexao.Update(player);
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
     }
 }

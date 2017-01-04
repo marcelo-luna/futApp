@@ -7,7 +7,12 @@
       <ListView ItemsSource="{Binding Player}">
         <ListView.ItemTemplate>
           <DataTemplate>
-            <SwitchCell x:Name="Player" Text="{Binding Name}" On="{Binding Status}" />
+            <SwitchCell Text="{Binding Name}" On="{Binding Status}" OnChanged="Cell_OnTapped">
+              <SwitchCell.ContextActions>
+                <MenuItem Text="Mais" ></MenuItem>
+                <MenuItem Text="Delete" ></MenuItem>
+              </SwitchCell.ContextActions>
+            </SwitchCell>
           </DataTemplate>
         </ListView.ItemTemplate>
       </ListView>

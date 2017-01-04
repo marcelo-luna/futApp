@@ -4,6 +4,8 @@ using Xamarin.Forms;
 using System.ComponentModel;
 using System.Windows.Input;
 using FutApp.Model;
+using System;
+using System.Linq;
 
 namespace FutApp.ViewModel
 {
@@ -36,8 +38,12 @@ namespace FutApp.ViewModel
             get { return status; }
             set
             {
-                status = value;
-                OnPropertyChanged("Status");
+                if (value != status)
+                {
+                    status = value;
+                    OnPropertyChanged("Status");
+                    //dao.update(Player.);
+                }
             }
         }
 
@@ -46,6 +52,14 @@ namespace FutApp.ViewModel
             Player = dao.Lista;
             this.dao = dao;
             this.page = page;
+
+            UpdatePlayer = new Command(() =>
+            {
+                /*Player player = new Player(Player.);
+                dao.save(player);
+                page.DisplayAlert("Salvar Jogador", $"Jogador {name} salvo com sucesso!", "OK")
+                ;*/
+            });
         }
 
         private void OnPropertyChanged(string nome)
