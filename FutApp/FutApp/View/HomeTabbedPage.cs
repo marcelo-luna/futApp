@@ -13,10 +13,10 @@ namespace FutApp.View
             PlayerDAO dao = new PlayerDAO(con);
 
             CadPlayer cadplayer = new CadPlayer(dao);
-            ListaPlayer listaplayer = new ListaPlayer(dao);
+            ListaPlayers listaPlayers = new ListaPlayers(dao);
 
             this.Children.Add(cadplayer);
-            this.Children.Add(listaplayer);
+            this.Children.Add(listaPlayers);
         }
     }
 }

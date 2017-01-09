@@ -47,8 +47,8 @@
       <DependentUpon>CadPlayer.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\HomeTabbedPage.cs" />
-    <Compile Include="View\ListaPlayer.xaml.cs">
-      <DependentUpon>ListaPlayer.xaml</DependentUpon>
+    <Compile Include="View\ListaPlayers.xaml.cs">
+      <DependentUpon>ListaPlayers.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -93,7 +93,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="View\ListaPlayer.xaml">
+    <EmbeddedResource Include="View\ListaPlayers.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

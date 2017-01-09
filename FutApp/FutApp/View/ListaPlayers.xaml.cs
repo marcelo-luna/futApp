@@ -9,9 +9,9 @@ using Xamarin.Forms;
 
 namespace FutApp.View
 {
-    public partial class ListaPlayer : ContentPage
+    public partial class ListaPlayers : ContentPage
     {
-        public ListaPlayer(PlayerDAO dao)
+        public ListaPlayers(PlayerDAO dao)
         {
             ListaPlayerViewModel vm = new ListaPlayerViewModel(dao, this);
             BindingContext = vm;
